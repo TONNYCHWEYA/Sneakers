@@ -1,6 +1,7 @@
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import styled from 'styled-components';
 
 export default function Login() {
   return (
@@ -21,7 +22,7 @@ export default function Login() {
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <Button variant="primary" type="submit">
-        Submit
+        Login
       </Button>
     </Form>
   );

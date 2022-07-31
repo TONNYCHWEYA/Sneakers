@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -28,27 +28,54 @@ button{
   margin-top: 10px;
 }
 `
+const ContainerSearch = styled.div`
+margin: 20px;
+.Search{
+  margin-bottom: 20px;
+}
+`
 
-function NewShoesForm({ shoes }){
+function NewShoesForm({ shoes, onHandleChange , query}){
+  const [clicked, setClick] = useState(false)
+  function handleClick(){
+    setClick((clicked) =>!clicked)
+  }
+
+  function handleCartClick(shoe){
+    fetch(`http://localhost:6001/shoes/${shoe.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        cart: !shoe.cart,
+      }),
+    })
+      .then((r) => r.json())
+      .then((updatedItem) => console.log(updatedItem)); 
+  }
 return(
   <div>
   <Style>
-    <button>Add New Shoes</button>
+    <button onClick={handleClick}>Add New Shoes</button>
   <div className="new-shoes-form">
-    <h2>New Shoes</h2>
-    <form>
+  { clicked ?(
+    
+   <form>
+    <h2>Add New Shoes</h2>
       <input type="text" name="name" placeholder="Shoes name" />
       <input type="text" name="image" placeholder="Image URL" />
       <input type="number" name="price" placeholder="price" />
       <button type="submit">Add Shoes</button>
-          </form>
+          </form>) : null}
   </div>
 
 
   </Style>
-  <Search />
+  <ContainerSearch >
+  <Search shoes={shoes} onHandleChange={onHandleChange} className="Search"/>
   <Row xs={1} md={3} className="g-4">
-      {shoes.map((shoe) => (
+      {shoes.filter(val=>val.name.toLowerCase().includes(query.toLowerCase())).map((shoe) => (
         <Col key={shoe.id}>
           <Card bg={'outline-success'}>
             <Card.Img variant="top" src={shoe.image} />
@@ -57,13 +84,14 @@ return(
               <Card.Text>
               Ksh {shoe.price}
               </Card.Text>
-              <button>Add to cart</button>
-              <Card.Link href="#">Another Link</Card.Link>
+              <button onClick={()=>handleCartClick(shoe)}>Add to cart</button>
+              <Card.Link href="#">Description</Card.Link>
             </Card.Body>
           </Card> 
         </Col>
       ))}
     </Row>
+    </ContainerSearch>
 
   </div>
 )

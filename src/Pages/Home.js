@@ -88,15 +88,15 @@ export default function Home({shoes}) {
   
      <Carousel className='carousel'>{
       shoes.map((shoe)=>(
-        <Carousel.Item key={shoe.id}>
+        <Carousel.Item key={shoe.id} interval={2000}>
         <img
           className="d-block w-100"
           src={shoe.image}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>{shoe.name}</h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
       ))

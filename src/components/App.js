@@ -16,6 +16,11 @@ import FooterContainer from '../container/FooterContainer'
 
 function App() {
   const [shoes, setShoes] = useState([]);
+  const [query, setQuery] = useState("")
+  function onHandleChange(searchedWord){
+    setQuery(searchedWord)
+  }
+
   useEffect(()=>{
 
     fetch("http://localhost:6001/shoes")
@@ -24,14 +29,14 @@ function App() {
   },[])
   return (
     <div className="App">
-      <Navbarcomp />
+      <Navbarcomp shoes={shoes}/>
       
 <Switch>
           <Route path="/shoesPage">
             <ShoesPage />
           </Route>
           <Route path="/product">
-            <ShoesPage shoes={shoes}/>
+            <ShoesPage shoes={shoes} onHandleChange={onHandleChange} query={query}/>
             </Route>
           <Route path="/login">
             <Login />

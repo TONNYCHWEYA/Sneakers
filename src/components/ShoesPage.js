@@ -3,10 +3,11 @@ import NewShoesForm from "./NewShoesForm"
 
 import Search from "./Search"
 
-function ShoesPage({shoes}){
+function ShoesPage({shoes, onHandleChange, query}){
+  
   return (
     <main>
-      <NewShoesForm shoes={shoes} />
+      <NewShoesForm shoes={shoes} onHandleChange={onHandleChange} query={query}/>
      
       
     </main>

@@ -1,5 +1,5 @@
 
-import { Navbar , Nav,  Form, FormControl, Button} from "react-bootstrap"
+import { Navbar , Nav,  Form, FormControl, Button, Card} from "react-bootstrap"
 import {
   
   Link
@@ -11,7 +11,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 
 
-function Navbarcomp(){
+function Navbarcomp({shoes}){
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -42,11 +42,26 @@ function Navbarcomp(){
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
+       
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        {shoes.map((shoe) => (
+        
+        <Card bg={'outline-success'}>
+          <Card.Img variant="top" src={shoe.image} />
+          <Card.Body>
+            <Card.Title>{shoe.name}</Card.Title>
+            <Card.Text>
+            Ksh {shoe.price}
+            </Card.Text>
+            <button>Buy</button>
+           <button style={{marginLeft:"120px"}}>Remove from cart</button>
+          </Card.Body>
+        </Card> 
+     
+    ))}
         </Offcanvas.Body>
       </Offcanvas>
+     
     <Form inline={true}>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
       <Button variant="outline-success">Search</Button>

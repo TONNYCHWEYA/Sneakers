@@ -5,49 +5,49 @@
       "name": "Airforce",
       "image": "./images/airforce.jpg",
       "price": 2599,
-      "cart": false
+      "cart": true
     },
     {
       "id": 2,
       "name": "Airmax",
       "image": "./images/nikeairmax.jpg",
       "price": 2598,
-      "cart": false
+      "cart": true
     },
     {
       "id": 3,
       "name": "converse",
       "image": "./images/converse.jpg",
       "price": 1099,
-      "cart": false
+      "cart": true
     },
     {
       "id": 4,
       "name": "Jordans",
       "image": "./images/jordans.jpg",
       "price": 3211,
-      "cart": false
+      "cart": true
     },
     {
       "id": 5,
       "name": "Nike Airmax",
       "image": "./images/nikeairmax.jpg",
       "price": 2037,
-      "cart": false
+      "cart": true
     },
     {
       "id": 6,
       "name": "Vans",
       "image": "./images/vans.jpg",
       "price": 2599,
-      "cart": false
+      "cart": true
     },
     {
       "id": 7,
       "name": "Yeezy Sply",
       "image": "./images/yeezysply.jpg",
       "price": 5500,
-      "cart": false
+      "cart": true
     }
   ]
 }
