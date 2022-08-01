@@ -39,7 +39,7 @@ As a user of the application,you will be able to :
 * Unzip the downloaded files in a folder of choice.
 * Open the index file from the zipped file with any browser.
  ****
- [Go Back to the top](# MORINGA LANDING PAGE)
+ [Go Back to the top](#Sneaker Shop)
 ### Live Link
 - Click this link to view the live application https://tonnychweya.github.io/Weekone-project/
 ### Technology  Used
