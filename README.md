@@ -1,5 +1,5 @@
 
-# Sneakers Shop
+# Sneaker Shop
  ## By Tonny Chweya
  ## Table of Content
  - [Description](#description)
@@ -13,7 +13,7 @@
  - [Authors Info](#Authors-Info)
  ## Description
  <p>This project is a web application where you can buy sneakers and sell the shoes that are no longer in use</p>
-[Go Back to the top](#Sneaker Shop)
+[Go Back to the top](# Sneaker Shop)
 ## Features
 As a user of the application,you will be able to :
 1. Login
@@ -21,7 +21,7 @@ As a user of the application,you will be able to :
 3. about page 
 4. Landing page
 5. Add to and to remove fom cart
-[Go Back to the top](#Sneaker Shop)
+[Go Back to the top](# Sneaker Shop)
 ## Behaviour Driven Development|
 | Behaviour      | Input        | Output       |
 | :------------- | :----------: | -----------: |
@@ -29,7 +29,7 @@ As a user of the application,you will be able to :
 | Enter your Email Address  | chweyatonny@gmail.com |   |
 | Enter your message or comment   |  I would like to inquire about something     |     |
 | Press Submit|     |Pop up "Tonny Chweya, we have received your message. Thank you for reaching out to us.|
-[Go Back to the top](#Sneaker Shop)
+[Go Back to the top](# Sneaker Shop)
  ###  Requirements
  * Access to  a computer or any other garget
  * Access to internet
@@ -39,14 +39,18 @@ As a user of the application,you will be able to :
 * Unzip the downloaded files in a folder of choice.
 * Open the index file from the zipped file with any browser.
  ****
- [Go Back to the top](#Sneaker Shop)
+ [Go Back to the top](# Sneaker Shop)
 ### Live Link
-- Click this link to view the live application https://tonnychweya.github.io/Weekone-project/
+- Click this link to view the live application https://ttttio.herokuapp.com/
 ### Technology  Used
-* HTML - which was used to develope the structure off the pages.
+* React -javascript Library 
 * CSS - which was used to style the User Interface.
-https://tonnychweya.github.io/Weekone-project/
-[Go Back to the top](# MORINGA LANDING PAGE)
+* React bootstrap
+* Styled components - Used with css to create components
+* heroku - Host our website
+* Json server
+https://ttttio.herokuapp.com/
+[Go Back to the top](# Sneaker Shop)
 ## Known Bugs
 * Mailchimp API does not function correctly as expected.
 ## Licence
@@ -67,8 +71,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-[Go Back to the top](# MORINGA LANDING PAGE)
+[Go Back to the top](# Sneaker Shop)
 ## Authors Info
 Slack Profile - [Tonny Chweya](https://app.slack.com/client/T0101L740P4/D03D3M9FBLJ/user_profile/U03D0QHJUKX)
-[Go Back to the top](# MORINGA LANDING PAGE)
+[Go Back to the top](# Sneaker Shop)
 
