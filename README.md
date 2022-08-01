@@ -13,7 +13,7 @@
  - [Authors Info](#Authors-Info)
  ## Description
  <p>This project is a web application where you can buy sneakers and sell the shoes that are no longer in use</p>
-[Go Back to the top](#MORINGA LANDING PAGE)
+[Go Back to the top](#Sneaker Shop)
 ## Features
 As a user of the application,you will be able to :
 1. Login
@@ -21,7 +21,7 @@ As a user of the application,you will be able to :
 3. about page 
 4. Landing page
 5. Add to and to remove fom cart
-[Go Back to the top](#MORINGA LANDING PAGE)
+[Go Back to the top](#Sneaker Shop)
 ## Behaviour Driven Development|
 | Behaviour      | Input        | Output       |
 | :------------- | :----------: | -----------: |
@@ -29,7 +29,7 @@ As a user of the application,you will be able to :
 | Enter your Email Address  | chweyatonny@gmail.com |   |
 | Enter your message or comment   |  I would like to inquire about something     |     |
 | Press Submit|     |Pop up "Tonny Chweya, we have received your message. Thank you for reaching out to us.|
-[Go Back to the top](#MORINGA LANDING PAGE)
+[Go Back to the top](#Sneaker Shop)
  ###  Requirements
  * Access to  a computer or any other garget
  * Access to internet
