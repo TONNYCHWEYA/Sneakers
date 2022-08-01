@@ -16,9 +16,11 @@
 [Go Back to the top](#MORINGA LANDING PAGE)
 ## Features
 As a user of the application,you will be able to :
-1. Describes the school.
-2. Lists Technical mentors
-3. 
+1. Login
+2. Sign-up
+3. about page 
+4. Landing page
+5. Add to and to remove fom cart
 [Go Back to the top](#MORINGA LANDING PAGE)
 ## Behaviour Driven Development|
 | Behaviour      | Input        | Output       |
