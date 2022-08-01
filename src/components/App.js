@@ -28,6 +28,10 @@ function App() {
     .then((data) => setShoes(data))
   },[])
 
+  function onHandleSubmit(newShoe){
+    setShoes([...shoes, newShoe])
+  }
+
 
   function onHandleCartClick(updateItem){
     const updateItems = shoes.map((shoe)=>{
@@ -49,7 +53,7 @@ function App() {
             <ShoesPage />
           </Route>
           <Route path="/product">
-            <ShoesPage shoes={shoes} onHandleChange={onHandleChange} query={query} onHandleCartClick={onHandleCartClick}/>
+            <ShoesPage shoes={shoes} onHandleChange={onHandleChange} query={query} onHandleCartClick={onHandleCartClick} onHandleSubmit={onHandleSubmit}/>
             </Route>
           <Route path="/login">
             <Login />

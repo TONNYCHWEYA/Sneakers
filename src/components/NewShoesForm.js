@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -35,8 +35,13 @@ margin: 20px;
 }
 `
 
-function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick}){
+function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick, onHandleSubmit}){
   const [clicked, setClick] = useState(false)
+  const [name, setName] = useState("")
+  const [image, setImage] = useState("")
+  const [price, setPrice] = useState("")
+
+
   function handleClick(){
     setClick((clicked) =>!clicked)
   }
@@ -54,6 +59,27 @@ function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick}){
       .then((r) => r.json())
       .then((updatedItem) => onHandleCartClick(updatedItem)); 
   }
+
+  function handleSubmit(e){
+    e.preventDefault();
+    const addedShoes = {
+      name: name,
+      image: image,
+      price: price,
+      cart: false
+    };
+    fetch("http://localhost:6001/shoes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(addedShoes),
+    })
+      .then((r) => r.json())
+      .then((newItem) => onHandleSubmit(newItem));
+  }
+
+  
 return(
   <div>
   <Style>
@@ -61,11 +87,14 @@ return(
   <div className="new-shoes-form">
   { clicked ?(
     
-   <form>
+   <form onSubmit={handleSubmit}>
     <h2>Add New Shoes</h2>
-      <input type="text" name="name" placeholder="Shoes name" />
-      <input type="text" name="image" placeholder="Image URL" />
-      <input type="number" name="price" placeholder="price" />
+      <input type="text" name="name" placeholder="Shoes name" value={name}
+        onChange={(e)=> setName(e.target.value)}
+      />
+      <input type="text" name="image" placeholder="Image URL" value={image} 
+       onChange={(e)=> setImage(e.target.value)}/>
+      <input type="text" name="price" placeholder="price" value={price}  onChange={(e)=> setPrice(e.target.value)}/>
       <button type="submit">Add Shoes</button>
           </form>) : null}
   </div>
