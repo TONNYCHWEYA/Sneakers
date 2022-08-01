@@ -35,7 +35,7 @@ As a user of the application,you will be able to :
  * Access to internet
  ### Installation Process
  ****
-* Clone to thir repo : git clone https://github.com/TONNYCHWEYA/Weekone-project.git
+* Clone to thir repo : https://github.com/TONNYCHWEYA/Sneakers.git
 * Unzip the downloaded files in a folder of choice.
 * Open the index file from the zipped file with any browser.
  ****
