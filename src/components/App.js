@@ -27,6 +27,19 @@ function App() {
     .then((r) => r.json())
     .then((data) => setShoes(data))
   },[])
+
+
+  function onHandleCartClick(updateItem){
+    const updateItems = shoes.map((shoe)=>{
+      if(updateItem.id === shoe.id){
+        return updateItem
+      }else{
+        return shoe
+      }
+      
+    })
+    setShoes(updateItems)
+  }
   return (
     <div className="App">
       <Navbarcomp shoes={shoes}/>
@@ -36,7 +49,7 @@ function App() {
             <ShoesPage />
           </Route>
           <Route path="/product">
-            <ShoesPage shoes={shoes} onHandleChange={onHandleChange} query={query}/>
+            <ShoesPage shoes={shoes} onHandleChange={onHandleChange} query={query} onHandleCartClick={onHandleCartClick}/>
             </Route>
           <Route path="/login">
             <Login />

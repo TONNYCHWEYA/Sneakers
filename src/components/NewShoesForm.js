@@ -35,7 +35,7 @@ margin: 20px;
 }
 `
 
-function NewShoesForm({ shoes, onHandleChange , query}){
+function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick}){
   const [clicked, setClick] = useState(false)
   function handleClick(){
     setClick((clicked) =>!clicked)
@@ -52,7 +52,7 @@ function NewShoesForm({ shoes, onHandleChange , query}){
       }),
     })
       .then((r) => r.json())
-      .then((updatedItem) => console.log(updatedItem)); 
+      .then((updatedItem) => onHandleCartClick(updatedItem)); 
   }
 return(
   <div>
@@ -84,7 +84,7 @@ return(
               <Card.Text>
               Ksh {shoe.price}
               </Card.Text>
-              <button onClick={()=>handleCartClick(shoe)}>Add to cart</button>
+              <button onClick={()=>handleCartClick(shoe)}>{shoe.cart? "Remove from cart" : "Add to cart"}</button>
               <Card.Link href="#">Description</Card.Link>
             </Card.Body>
           </Card> 

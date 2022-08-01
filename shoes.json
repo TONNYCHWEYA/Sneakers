@@ -5,7 +5,7 @@
       "name": "Airforce",
       "image": "./images/airforce.jpg",
       "price": 2599,
-      "cart": true
+      "cart": false
     },
     {
       "id": 2,
@@ -33,21 +33,21 @@
       "name": "Nike Airmax",
       "image": "./images/nikeairmax.jpg",
       "price": 2037,
-      "cart": true
+      "cart": false
     },
     {
       "id": 6,
       "name": "Vans",
       "image": "./images/vans.jpg",
       "price": 2599,
-      "cart": true
+      "cart": false
     },
     {
       "id": 7,
       "name": "Yeezy Sply",
       "image": "./images/yeezysply.jpg",
       "price": 5500,
-      "cart": true
+      "cart": false
     }
   ]
 }

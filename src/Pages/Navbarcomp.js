@@ -44,7 +44,7 @@ function Navbarcomp({shoes}){
         </Offcanvas.Header>
        
         <Offcanvas.Body>
-        {shoes.map((shoe) => (
+        {shoes.filter((val)=> val.cart).map((shoe) => (
         
         <Card bg={'outline-success'}>
           <Card.Img variant="top" src={shoe.image} />
