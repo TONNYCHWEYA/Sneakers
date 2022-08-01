@@ -47,7 +47,7 @@ function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick, onHand
   }
 
   function handleCartClick(shoe){
-    fetch(`http://localhost:6001/shoes/${shoe.id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/shoes/${shoe.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick, onHand
       price: price,
       cart: false
     };
-    fetch("http://localhost:6001/shoes", {
+    fetch(`${process.env.REACT_APP_API_URL}/shoes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -12,7 +12,7 @@
       "name": "Airmax",
       "image": "./images/nikeairmax.jpg",
       "price": 2598,
-      "cart": true
+      "cart": false
     },
     {
       "id": 3,

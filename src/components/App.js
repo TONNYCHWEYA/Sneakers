@@ -23,7 +23,7 @@ function App() {
 
   useEffect(()=>{
 
-    fetch("http://localhost:6001/shoes")
+    fetch(`${process.env.REACT_APP_API_URL}/shoes`)
     .then((r) => r.json())
     .then((data) => setShoes(data))
   },[])
