@@ -2,9 +2,14 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styled from 'styled-components';
+const Style = styled.div`
+margin: 40px;
+
+`
 
 export default function Login() {
   return (
+    <Style>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -25,6 +30,7 @@ export default function Login() {
         Login
       </Button>
     </Form>
+    </Style>
   );
 }
 
