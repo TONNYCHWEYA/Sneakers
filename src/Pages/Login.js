@@ -3,7 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styled from 'styled-components';
 const Style = styled.div`
-margin: 40px;
+
+margin: 80px;
+padding: 50px;
+.mb-3{
+  width: 70%;
+}
 
 `
 
@@ -26,7 +31,7 @@ export default function Login() {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="outline-success" type="submit">
         Login
       </Button>
     </Form>
