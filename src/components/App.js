@@ -22,8 +22,10 @@ function App() {
   }
 
   useEffect(()=>{
+    const devEnv = process.env.NODE_ENV !== "production"
+    const {REACT_APP_DEV_URL, REACT_APP_PROD_URL} = process.env
 
-    fetch(`${process.env.REACT_APP_API_URL}/shoes`)
+    fetch(`${devEnv? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`)
     .then((r) => r.json())
     .then((data) => setShoes(data))
   },[])
