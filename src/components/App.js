@@ -23,7 +23,9 @@ function App() {
 
   useEffect(()=>{
     const devEnv = process.env.NODE_ENV !== "production"
+    console.log(devEnv)
     const {REACT_APP_DEV_URL, REACT_APP_PROD_URL} = process.env
+    console.log(REACT_APP_DEV_URL)
 
     fetch(`${devEnv? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`)
     .then((r) => r.json())
