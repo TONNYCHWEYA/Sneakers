@@ -47,9 +47,8 @@ function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick, onHand
   }
 
   function handleCartClick(shoe){
-    const devEnv = process.env.NODE_ENV !== "production"
-    const {REACT_APP_DEV_URL, REACT_APP_PROD_URL} = process.env
-    fetch(`${devEnv? REACT_APP_DEV_URL : REACT_APP_PROD_URL}/${shoe.id}`, {
+   
+    fetch(`https://server-shoes.herokuapp.com/shoes/${shoe.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -70,9 +69,8 @@ function NewShoesForm({ shoes, onHandleChange , query, onHandleCartClick, onHand
       price: price,
       cart: false
     };
-    const devEnv = process.env.NODE_ENV !== "production"
-    const {REACT_APP_DEV_URL, REACT_APP_PROD_URL} = process.env
-    fetch(`${devEnv? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`, {
+   
+    fetch(`https://server-shoes.herokuapp.com/shoes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
